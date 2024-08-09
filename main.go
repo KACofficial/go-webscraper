@@ -17,6 +17,7 @@ func main() {
 	fmt.Print("Enter a url: https://")
 	BaseURLNoHTTP, _ := reader.ReadString('\n')
 	BaseURLNoHTTP = BaseURLNoHTTP[:len(BaseURLNoHTTP)-1]
+	BaseURLNoHTTP = strings.TrimSpace(BaseURLNoHTTP)
 	fmt.Print(BaseURLNoHTTP)
 	BaseURL := "https://" + BaseURLNoHTTP
 	// BaseURL = BaseURL[:len(BaseURL)-1]
